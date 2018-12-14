@@ -1,32 +1,89 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.home {
+  --lightblue: #299BE8;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__title {
+
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.btn--blue {
+  background: none;
+  color: var(--lightblue);
+  border: 2px solid var(--lightblue);
+}
+
+.btn--blue:hover {
+  background: var(--lightblue);
+  color: #fff;
+}
+
+.btn--medium {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.users {
+  width: 30%;
+  padding: 1em;
+  background: yellow;
+  /* position: relative;
+  top: -3em; */
+}
+
+.users--closed {
+  display: none;
+}
+
+.users__title {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
