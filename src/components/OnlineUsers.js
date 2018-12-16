@@ -1,10 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
+OnlineUsers.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+  users: PropTypes.array.isRequired  
+}
 
 function OnlineUsers({toggle, users}) {
-  console.log(toggle)
   return (
-    <div className={toggle ? "users users--open" : "users"}>
+    <div className={toggle ? 'users users--open' : 'users'}>
       <h2 className='users__title'>Online Users: {users.length}</h2>
       {
         users.map(user => (
