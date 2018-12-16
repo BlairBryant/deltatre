@@ -22,7 +22,7 @@ describe('OnlineUsers tests', () => {
   , async () => {
     expect(mountedOnlineUsers.props().toggle).toEqual(false)
     expect(mountedOnlineUsers.props().users).toHaveProperty('length', 0)
-    function hey() {
+    function delayedTests() {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           expect(mountedApp.state().onlineUsers).toHaveProperty('length', 4)
@@ -30,7 +30,7 @@ describe('OnlineUsers tests', () => {
         }, 3000)
       })
     }
-    return await expect(hey()).resolves.toEqual(false)
+    return await expect(delayedTests()).resolves.toEqual(false)
   })
 
   it('Always renders parent div .users', () => {
